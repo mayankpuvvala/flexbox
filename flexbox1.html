@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        body{
+            margin: 30px;
+        }
+        .flex-container{
+            display: flex;
+            width: 100%;
+            height: 500px;
+            margin: 20px;
+            flex-wrap: wrap;
+            border: 2px solid black;
+            align-content: space-between;
+        }
+        .box1{
+            padding: 30px 30px;
+            background: salmon;
+            width: 20px;
+        }
+        .box2{
+            padding: 30px;
+            background: yellowgreen;
+            width: 15%;
+            order: 10; /*changes the current box position and shifts it to 10th position in the given code. the succeeding elements will move one step
+            forward at a time*/
+        }
+        .box3{
+            padding: 30px;
+            background: burlywood;
+            flex-basis: 400px;
+            width: 30%;
+        }
+        .box4{
+            padding: 30px;
+            background: blanchedalmond;
+            
+            flex-basis: 100px;
+            width: 23%;
+            
+        }
+        .box5{
+            padding: 30px;
+            background: blueviolet;
+            width: 2%;
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+    </div>
+
+</body>
+</html>
+<!--should remember the difference between align items and content and their functions 
+flex wrap, basis- a particular box can grow to this extent when we change the size of browser, direction, shrink- to reduce the size of this box wrt to other elements and 
+vice versa with grow -->
